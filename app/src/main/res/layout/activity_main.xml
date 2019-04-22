@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/removeAllEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="撤销所有编辑"
+        app:layout_constraintEnd_toEndOf="@+id/on_and_off"
+        app:layout_constraintStart_toStartOf="@+id/on_and_off"
+        app:layout_constraintTop_toBottomOf="@+id/last_step" />
+
+    <Button
+        android:id="@+id/select_feature"
+        android:layout_width="91dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="选择要素"
+        app:layout_constraintBottom_toTopOf="@+id/on_and_off"
+        app:layout_constraintEnd_toEndOf="@+id/on_and_off"
+        app:layout_constraintStart_toStartOf="@+id/on_and_off" />
+
+    <Button
+        android:id="@+id/loadShapefile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="加载文件"
+        app:layout_constraintBottom_toTopOf="@+id/select_feature"
+        app:layout_constraintEnd_toEndOf="@+id/on_and_off"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/on_and_off" />
+
+    <Spinner
+        android:id="@+id/layer_select"
+        android:layout_width="136dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mapView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <Spinner
+        android:id="@+id/operation_select"
+        android:layout_width="136dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.406"
+        app:layout_constraintStart_toEndOf="@+id/layer_select"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="88dp"
+        android:text="保存"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/on_and_off"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/on_and_off"
+        app:layout_constraintTop_toBottomOf="@+id/removeAllEdit"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/last_step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="撤销上次编辑"
+        app:layout_constraintEnd_toEndOf="@+id/on_and_off"
+        app:layout_constraintStart_toStartOf="@+id/on_and_off"
+        app:layout_constraintTop_toBottomOf="@+id/on_and_off" />
+
+    <Button
+        android:id="@+id/on_and_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="8dp"
+        android:text="开始"
+        app:layout_constraintEnd_toEndOf="@+id/mapView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.esri.arcgisruntime.mapping.view.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="28dp"></com.esri.arcgisruntime.mapping.view.MapView>
+
+</android.support.constraint.ConstraintLayout>
